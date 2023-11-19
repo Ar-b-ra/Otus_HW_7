@@ -21,6 +21,7 @@ class TestRun(unittest.TestCase):
         queue.put(mock_func1)
         queue.put(mock_func2)
         obj = QueueWorker(queue)
+        obj.is_working = True
         obj.run()
         self.assertFalse(obj.is_working)
         mock_func1.assert_called_once()

@@ -16,5 +16,3 @@ root_logger.addHandler(consoleHandler)
 
 root_logger.setLevel("DEBUG")
 
-if __name__ == "__main__":
-    root_logger.exception(Exception("exception"))
